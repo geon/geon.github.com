@@ -12,6 +12,7 @@ title: ASCII Art Signatures In The Wild
 	pre{
 		background-color: #222;
 		color: #eee;
+		line-height: 1em;
 	}
 	
 	div.wide pre{
