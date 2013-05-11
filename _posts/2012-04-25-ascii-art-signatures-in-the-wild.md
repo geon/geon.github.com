@@ -1071,8 +1071,8 @@ All glory to the HTML-toad!
 	        000000008 0000000000000000:000008000000000000000000000000000000~:00000000000000  
 	        0000008     +00000000000   00000   000000000000   7000000000000~000000000000000
 	
-	        Site by Bruce Giovando â  brucegiovando.com
-	        Copyright Voleurz Design Limited 2011 â  voleurz.com
+	        Site by Bruce Giovando â - brucegiovando.com
+	        Copyright Voleurz Design Limited 2011 â - voleurz.com
 
 </code></pre></div>
 ####jamiedubs.com
