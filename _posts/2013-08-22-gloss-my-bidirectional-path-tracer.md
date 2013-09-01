@@ -119,4 +119,4 @@ My solution was to use fewer samples in the last row and make that row slightly 
 
 And it helped! Now the light looks really even. I also let the rendering run it run a bit longer. It is butter smooth after 256 samples per pixel.
 
-Next up: more materials?
+Next up: [More materials](http://geon.github.io/programming/2013/09/01/restructured-code-and-glossy-reflections/)?
