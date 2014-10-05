@@ -50,7 +50,7 @@ The code for this article is [available at Github](https://github.com/geon/deplo
 
 When you use Git to deploy, any checked in file will be overwritten at each deploy. Therefore, any new files, like caches, uploaded user files, etc. must never be checked in. I like to make that easier by storing them all in a `unversioned-files` folder in the project root. It is checked in, but added to the `.gitignore` file, and any other folder that need to have unversioned files (like the `public` folder in Express) are symbolic links into it.
 
-I won't go through the entire process of installing the server. For this demo, I used a pretty standard install of Ubuntu 14.10 with Node.js, running in VirtualBox. (Note that you still need [Chris Lea's 3:rd party repsitory](http://www.ubuntuupdates.org/ppa/chris_lea_nodejs) to get Node.js and npm properly working.) The rest of the article assumes you have it set up with a user named `demouser`.
+I won't go through the entire process of installing the server. For this demo, I used a pretty standard install of Ubuntu 14.10 with Node.js, running in VirtualBox. (Note that you still need [Chris Lea's 3:rd party repository](http://www.ubuntuupdates.org/ppa/chris_lea_nodejs) to get Node.js and npm properly working.) The rest of the article assumes you have it set up with a user named `demouser`.
 
 Port 80
 -------
@@ -155,7 +155,7 @@ The magic is all in the hooks. In my pre-receive hook, I check for changes to th
 
 Anything outputted to stdout/stderr will be sent by git to your console as well, so you'll se exactly what's going on remotely. Awesome.
 
-Let's go throught the hooks.
+Let's go through the hooks.
 
 <small>Filename: `	git-hooks/pre-receive`</small>
 
@@ -328,7 +328,7 @@ To demouser@192.168.0.5:~/deploy-demo.git/
 
 Refresh the browser, and you should see your change. That means the app was updated and the service restarted properly.
 
-How about changing the table definiton in `	schema.sql`? Add a collumn for author id, and remove the keywords.
+How about changing the table definition in `	schema.sql`? Add a column for author id, and remove the keywords.
 
 ```sql
 CREATE TABLE posts (
