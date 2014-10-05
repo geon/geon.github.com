@@ -212,7 +212,7 @@ Setting Up Upstart
 
 The Upstart file doesn't have to be complex. Actually, the one I use is very simple:
 
-```
+```sh
 # Respawn up to 10 times in 1 minute.
 respawn
 respawn limit 10 1
@@ -253,11 +253,13 @@ Let's try it out. First start up the service...
 
 	sudo start deploy-demo
 
-...and verify that it's running on http://[PRODUCTION_SERVER_IP]. You should see a happy cat smiley in your browser.
+...and verify that it's running on http://[PRODUCTION\_SERVER\_IP]. You should see a happy cat smiley in your browser.
 
-Now change `app.js` serve something else:
+Now change `app.js` to serve something else:
 
+```js
 	res.end('Something else.');
+```
 	
 Commit and push the change:
 
