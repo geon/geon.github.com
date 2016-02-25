@@ -3,10 +3,10 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-markdown: redcarpet
+# markdown: redcarpet
 # redcarpet:
 #   extensions: ["fenced_code_blocks"]
-highlighter: pygments
+highlighter: rouge
 
 
 # Themes are encouraged to use these universal variables 
