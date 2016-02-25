@@ -52,7 +52,7 @@ The first issue to take care of is making the `full-screen` div cover the full w
 
 You need to set `height: 100%` on `full-screen`. But that isn't enough. As far as CSS is concerned, the `BODY` element surrounding the div of the document doesn't have a height on it's own, so you need the 100% height there too. Same thing with the `HTML` element surrounding *that*. The `BODY` also has a margin we need to get rid of.
 
-```css
+```less
 
 html,
 body,
@@ -75,7 +75,7 @@ This is going to be pretty repetitive, tedious and error prone if you write it i
 
 Let's make the outermost div a flexbox. The children will have a fixed height unless explicitly marked to use `flex-grow` (and `flex-shrink`) to fill the available space.
 
-```css
+```less
 
 // A container using the flexbox layout.
 .flex-container {
@@ -106,7 +106,7 @@ Let's make the outermost div a flexbox. The children will have a fixed height un
 
 Apply them as mixins to the `full-screen`, and add sizing to the children:
 
-```css
+```less
 .full-screen {
 	
 	.flex-container;
@@ -125,7 +125,7 @@ Apply them as mixins to the `full-screen`, and add sizing to the children:
 
 You need to do the same for every div you want to behave like this.
 
-```css
+```less
 .full-screen {
 	
 	.flex-container;
@@ -160,7 +160,7 @@ This still isn't working, though. Large content in `.main` will push down the fo
 
 Let's add that to `.flex-container`.
 
-```css
+```less
 .flex-container {
 
 	display: flex;
