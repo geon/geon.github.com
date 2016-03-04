@@ -1,0 +1,135 @@
+---
+layout: post
+category : Programming
+tags : [dyslexia, typoglycemia, Javascript]
+title: Dsxyliea
+---
+{% include JB/setup %}
+
+Uma amiga que tem dislexia descreveu para mim como ela experiencia a leitura. Ela *pode* ler, mas isso requer muita concentração, e as letras aparentam "pular por todo canto".
+
+Eu lembro de ter lido algo sobre [typoglycemia](https://en.wikipedia.org/wiki/Typoglycemia). Será que não seria possível fazer isso interativamente num website usando Javascript? Claro que seria.
+
+Sente vontade de criar um bookmarklet disso ou algo do tipo? [Forke ele](https://github.com/geon/geon.github.com/blob/master/_posts/2016-03-03-dsxyliea.md) no github.
+
+> Dislexia é caracterizada pela dificuldade em aprender a ler fluentemente e com compreensão acurada apesar de inteligência normal. Isso inclui dificuldade com consciência fonológica, decodificação fonológica, velocidade de processamento, codificação ortográfica, memória auditiva de curto prazo, habilidades linguísticas/compreensão verbal, e/ou nomeação rápida
+
+> Transtorno de leitura de desenvolvimento (Developmental reading disorder, dislexia) é a mais comum das dificuldades de aprendizagem. Dislexia é a mais conhecida dos transtornos de leitura, contudo nem todos os transtornos de leitura são conectados à dislexia.
+
+> Alguns vêem dislexia como diferente de dificuldades de leitura provenientes de outras causas, por exemplo uma deficiência não-neurológica da visão ou audição, ou instruções pobres ou inadequadas em relação à leitura. Existem três subtipos cognitivos propostos de dislexia (auditiva, visual e atencional), embora casos individuais de dislexia sejam melhores explicados por déficits neuropsicológicos subjacentes e transtornos de aprendizado co-ocorrentes (ex: transtorno de déficit de atenção e hiperatividade, deficiência matemática etc). Embora seja considerada um transtorno de recepção baseado em linguagens na literatura de pesquisa, dislexia também afeta a habilidade de uma pessoa de se expressar através da linguagem. Pesquisadores no MIT descobriram que pessoas com dislexia exibem capacidade debilitada de reconhecimento de voz.
+
+*Fonte: [Wikipedia](http://en.wikipedia.org/wiki/Dyslexia)*
+
+Texto traduzido despreocupadamente para o português.
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+
+"use strict";
+
+$(function(){
+
+	var getTextNodesIn = function(el) {
+	    return $(el).find(":not(iframe)").addBack().contents().filter(function() {
+	        return this.nodeType == 3;
+	    });
+	};
+
+	// var textNodes = getTextNodesIn($("p, h1, h2, h3"));
+	var textNodes = getTextNodesIn($("*"));
+
+
+
+	function isLetter(char) {
+		return /^[\d]$/.test(char);
+	}
+
+
+	var wordsInTextNodes = [];
+	for (var i = 0; i < textNodes.length; i++) {
+		var node = textNodes[i];
+
+		var words = []
+
+		var re = /\w+/g;
+		var match;
+		while ((match = re.exec(node.nodeValue)) != null) {
+
+			var word = match[0];
+			var position = match.index;
+
+			words.push({
+				length: word.length,
+				position: position
+			});
+		}
+
+		wordsInTextNodes[i] = words;
+	};
+
+
+	function messUpWords () {
+
+		for (var i = 0; i < textNodes.length; i++) {
+
+			var node = textNodes[i];
+
+			for (var j = 0; j < wordsInTextNodes[i].length; j++) {
+
+				// Only change a tenth of the words each round.
+				if (Math.random() > 1/10) {
+
+					continue;
+				}
+
+				var wordMeta = wordsInTextNodes[i][j];
+
+				var word = node.nodeValue.slice(wordMeta.position, wordMeta.position + wordMeta.length);
+				var before = node.nodeValue.slice(0, wordMeta.position);
+				var after  = node.nodeValue.slice(wordMeta.position + wordMeta.length);
+
+				node.nodeValue = before + messUpWord(word) + after;
+			};
+		};
+	}
+
+	function messUpWord (word) {
+
+		if (word.length < 3) {
+
+			return word;
+		}
+
+		return word[0] + messUpMessyPart(word.slice(1, -1)) + word[word.length - 1];
+	}
+
+	function messUpMessyPart (messyPart) {
+
+		if (messyPart.length < 2) {
+
+			return messyPart;
+		}
+
+		var a, b;
+		while (!(a < b)) {
+
+			a = getRandomInt(0, messyPart.length - 1);
+			b = getRandomInt(0, messyPart.length - 1);
+		}
+
+		return messyPart.slice(0, a) + messyPart[b] + messyPart.slice(a+1, b) + messyPart[a] + messyPart.slice(b+1);
+	}
+
+	// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+	function getRandomInt(min, max) {
+		
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+
+
+	setInterval(messUpWords, 50);
+});
+
+
+</script>
