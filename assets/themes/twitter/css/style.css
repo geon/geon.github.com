@@ -1,6 +1,7 @@
 /* Override some defaults */
 html, body {
   background-color: #eee;
+  font-family: Garamond, serif;
 }
 .navbar {
   margin-bottom: 0;
