@@ -22,6 +22,14 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+
+  <script type="text/javascript">
+      public static Color getContrastColor(Color color) {
+        double y = (299 * color.getRed() + 587 * color.getGreen() + 114 * color.getBlue()) / 1000;
+        return y >= 128 ? Color.black : Color.white;
+      }
+  </script>
+  
   </head>
 
   <body>
