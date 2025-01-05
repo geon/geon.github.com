@@ -46,7 +46,7 @@ Conclusion
 My current object model looks something like this:
 
 
-###Material.h
+### Material.h
 
 	struct MaterialVTableStruct {
 		Photon (*materialSampleBRDF)(const Material *material, const Intersection intersection, const Photon incoming);
@@ -61,7 +61,7 @@ My current object model looks something like this:
 
 	Photon materialSampleBRDF(const Material *material, const Intersection intersection, const Photon incoming);
 
-###Material.c
+### Material.c
 
 	#include "Material.h"
 
@@ -77,7 +77,7 @@ My current object model looks something like this:
 
 As you can see, the implementation of `materialSampleBRDF` is just a convenient wrapper around a call to the function in the "v table". I chose to use a struct with named members instead of an array, since it IMHO is cleaner.
 
-###MaterialDiffuse.h
+### MaterialDiffuse.h
 
 	typedef struct {
 		const Material parent;
@@ -88,7 +88,7 @@ As you can see, the implementation of `materialSampleBRDF` is just a convenient 
 
 	Photon materialDiffuseSampleBRDF(const Material *material, const Intersection intersection, const Photon incoming);
 
-###MaterialDiffuse.c
+### MaterialDiffuse.c
 
 	// The vtable for this specific class.
 	const MaterialVTable materialDiffuseVTable = (MaterialVTable) {
