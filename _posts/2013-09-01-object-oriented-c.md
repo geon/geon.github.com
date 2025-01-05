@@ -1,10 +1,9 @@
 ---
-layout: post
 category : Programming
 tags : [object orientation, C, Gloss]
 title: Object Oriented C
 ---
-{% include JB/setup %}
+
 
 
 Disclaimer

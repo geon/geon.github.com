@@ -1,10 +1,9 @@
 ---
-layout: post
 category : Programming
 tags : [web, ccs, javascript]
 title: A Clean Slate Web
 ---
-{% include JB/setup %}
+
 
 This is going to be a bit of a rant. Sorry.
 

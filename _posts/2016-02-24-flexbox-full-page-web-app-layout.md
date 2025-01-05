@@ -1,10 +1,9 @@
 ---
-layout: post
 category : Programming
 tags : [web, ccs, less, jade]
 title: Flexbox Full Page Web App Layout
 ---
-{% include JB/setup %}
+
 
 I was working on a web app layout, and since we require a modern browser (ie10+), I had the chance to use Flexbox. Yay!
 

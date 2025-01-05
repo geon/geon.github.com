@@ -1,10 +1,9 @@
 ---
-layout: post
 category : Programming
 tags : [UI, iOS, iPhone]
 title: At The Receiving End Of Bad UI
 ---
-{% include JB/setup %}
+
 
 I am a developer in my own startup. We pride ourselves on our strong focus on UX and good UI design. We consider this such a central concept that we all (all two of us) take part in the UX design process. This goes deeper than the professional level -- we like to talk about all aspects of UX, as well as design for the sake of it. We send each other links with [examples of great UI](http://littlebigdetails.com/) as well as the [less great](http://theresaneil.wordpress.com/2011/08/22/bad-mobile-apps-ui-design-gone-wrong/#).
 

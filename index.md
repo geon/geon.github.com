@@ -1,10 +1,7 @@
 ---
-layout: page
 title: Hello World!
 tagline: I wish I knew what I'm doing.
 ---
-{% include JB/setup %}
-
 
 I have set up a blog to publish the stuff on my mind that are too long for a facebook status. We'll see how that goes.
     
@@ -15,4 +12,3 @@ I have set up a blog to publish the stuff on my mind that are too long for a fac
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-

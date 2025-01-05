@@ -1,10 +1,9 @@
 ---
-layout: post
 category : Programming
 tags : [git, deployment, hooks, upstart]
 title: Git Push Deploy
 ---
-{% include JB/setup %}
+
 
 <style type="text/css">
 pre.console {
