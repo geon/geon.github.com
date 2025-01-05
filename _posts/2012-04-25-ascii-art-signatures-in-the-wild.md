@@ -518,6 +518,7 @@ All glory to the HTML-toad!
 	        ::::::::: PhotoSecrets.com coding & design by Andrew Hudson, 2012 :::::::::
 
 ####boatnerd.com
+
 	                                                           ______ 
 	                                                           |O 0 |/_/
 	  ______                                                   | 0  0  |_
@@ -867,6 +868,7 @@ All glory to the HTML-toad!
 
 
 ####letsgift.it
+
 	   __       _   _         ___ _  __ _      _____ _
 	  / /   ___| |_( )___    / _ (_)/ _| |_    \_   \ |_
 	 / /   / _ \ __|// __|  / /_\/ | |_| __|    / /\/ __|
