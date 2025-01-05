@@ -8,9 +8,13 @@ title: ASCII Art Signatures In The Wild
 <a href="https://github.com/geon/asciiart">Fork me on GitHub</a>
 <style type="text/css">
 pre{
-background-color: #222;
-color: #eee;
+background-color: #222 !important;
+color: #eee !important;
 line-height: 1em;
+}
+pre code{
+background-color: transparent !important;
+color: inherit !important;
 }
 div.wide pre{
 overflow-x: auto;
