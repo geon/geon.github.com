@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Programming
 tags : [web, ccs, less, jade]
 title: Flexbox Full Page Web App Layout

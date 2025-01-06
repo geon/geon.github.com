@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Design
 tags : [iOS, iPhone, iPhone nano, screenshots]
 title: A Small iPhone

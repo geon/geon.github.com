@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Programming
 tags : [client-side templating, CSS transitions, javascript, CSS, Handlebars, Mustache]
 title: Client-Side Templating Breaks CSS Transitions 

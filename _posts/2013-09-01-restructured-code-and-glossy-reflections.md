@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Programming
 tags : [glossy reflections, Gloss, Cornell box]
 title: Restructured Code And Glossy Reflections

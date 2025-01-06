@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Programming
 tags : [UI, iOS, iPhone]
 title: At The Receiving End Of Bad UI

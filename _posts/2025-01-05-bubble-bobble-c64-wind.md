@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Programming
 tags : [c64, Bubble Bobble]
 title: Parsing the c64 Bubble Bobble Wind Currents

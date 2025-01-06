@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Programming
 tags : [ASCII art, PHP, asynchronous, cURL]
 title: ASCII Art Signatures In The Wild

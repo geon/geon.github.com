@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Programming
 tags : [ray tracing, bidirectional path tracing, Gloss, Cornell box]
 title: Gloss - My Bidirectional Path Tracer 

@@ -1,4 +1,5 @@
 ---
+layout: post
 category : Programming
 tags : [git, deployment, hooks, upstart]
 title: Git Push Deploy
