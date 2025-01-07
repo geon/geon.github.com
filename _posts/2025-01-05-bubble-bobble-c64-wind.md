@@ -27,6 +27,10 @@ title: Parsing the c64 Bubble Bobble Wind Currents
 	}
 </style>
 
+
+<img src="/assets/posts/2025-01-05-bubble-bobble-c64-wind/level-5.png">
+
+
 Background
 ---------
 
