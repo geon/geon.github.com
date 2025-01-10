@@ -51,7 +51,7 @@ The platforms are stored as 1-bit bitmaps where each tile in the level is repres
 
 But levels have a separate array of metadata containing among other things a flag signaling if the level is symmetric. Instead of just storing the whole bitmap, symmetric levels store only half of it and mirror it in a separate step, saving 46 bytes.
 
-The same metadata array is used to store wether a level has extra graphics decorating the sides. The extra graphics are stored as 2 x 2 tiles of 8 bytes each giving 32 bytes each, and are dynamically written to the charset when loading the level. Levels without this decoration just use the single tile platform graphics instead.
+The same metadata array is used to store wether a level has extra graphics decorating the sides. The extra graphics are stored as 2 x 2 tiles of 8 bytes each giving 32 per level, and are dynamically written to the charset when loading the level. Levels without this decoration just use the single tile platform graphics instead.
 
 The monsters instead use a single null-byte to terminate the array of monsters for each level. Pretty easy.
 
