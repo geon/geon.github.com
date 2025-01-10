@@ -335,7 +335,7 @@ At e200, the first rectangle byte is copied back to A from the X register, since
 
 At e205, the second rectangle byte is read. It too is copied to the X registry. It is shifted right twice and the masked with #%11111110. This is the top position of the rectangle.
 
-Notice how the lowest bit was masked away. You'd think the byte would be shifter right one more time instead. But the code used to actually draw the rectangle to the wind buffer would need to multiply it by 2 anyway, so it is stored as twice the actual value.
+Notice how the lowest bit was masked away. You'd think the byte would be shifted right one more time instead. But the code used to actually draw the rectangle to the wind buffer would need to multiply it by 2 anyway, so it is stored as twice the actual value.
 
 At e210, the remaining 3 bits are masked with #%00000111 and stored at address $06. They are the top 3 bits of the 5 bit rectangle width. The bottom 2 bits are taken from the top bits of the last byte of the rectangle. It is done at e21b, by shifting out the top bit from the A register and ROL-ing it into the bottom of the byte at address $06 where the width was stored. That's done twice, once for each bit.
 
