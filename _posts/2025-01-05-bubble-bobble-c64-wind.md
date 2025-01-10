@@ -333,7 +333,7 @@ At e1fe, the resulting 2-bit value is the wind direction, and is stored away for
 
 At e200, the first rectangle byte is copied back to A from the X register, since there is more data in it to handle. This time it is masked with #%00011111. That's the left position of the rectangle. It too is stored away for later.
 
-At e205, the second rectangle byte is read. It too is copied to the X registry. It is shifter right twice and the masked with #%11111110. This is the top position of the rectangle.
+At e205, the second rectangle byte is read. It too is copied to the X registry. It is shifted right twice and the masked with #%11111110. This is the top position of the rectangle.
 
 Notice how the lowest bit was masked away. You'd think the byte would be shifter right one more time instead. But the code used to actually draw the rectangle to the wind buffer would need to multiply it by 2 anyway, so it is stored as twice the actual value.
 
