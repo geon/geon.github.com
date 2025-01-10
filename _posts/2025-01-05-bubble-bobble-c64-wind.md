@@ -59,7 +59,7 @@ At this point I had noticed that the titular bubbles follows "wind currents" cle
 
 <figure>
 	<img src="/assets/posts/2025-01-05-bubble-bobble-c64-wind/wind-currents-in-debugger.png">
-	<figcaption>You can see the wind currents in a debugger. "@123" are the first 4 entries in the default c64 character set. That means the memory contains the numbers 0-3, representing up, right, down and left, respectively.</figcaption>
+	<figcaption>You can see the wind currents in a debugger. "@ABC" are the first 4 entries in the default c64 character set. That means the memory contains the numbers 0-3, representing up, right, down and left, respectively.</figcaption>
 </figure>
 
 It was't too hard to find the code responsible for decoding this data. I basically just set a debugger breakpoint when the visible memory was written to. It was also easy to find where the source data was stored. Understanding how the format worked was a lot harder. I spent a lot of hours staring at it, but since this was almost my first exposure to ASM language, I found it absolutely brain melting.
