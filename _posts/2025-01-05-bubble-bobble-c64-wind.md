@@ -11,16 +11,18 @@ title: Parsing the c64 Bubble Bobble Wind Currents
 		flex-direction: column;
 		justify-content: center;
 	}
-	figure figcaption {
+	figcaption {
 		font-style: italic;
 		text-align: center;
 	}
-	figure img {
+	img {
 		height: 100%;
 		width: 100%;
 		object-fit: contain;
+		box-sizing: border-box;
+            background: white;
 	}
-	figure pre {
+	pre {
 		overflow-x: auto;
 		overflow-y: hidden;
 		padding-bottom: 20px;
