@@ -2,7 +2,7 @@
 layout: post
 category : Programming
 tags : [c64, Bubble Bobble]
-title: The Bubble Bobble Continue Bug
+title: Fixing The C64 Bubble Bobble Continue Bug
 ---
 
 <style type="text/css">
